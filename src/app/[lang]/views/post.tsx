@@ -25,7 +25,7 @@ export default function Post({ data }: { data: Article }) {
     const { title, description, publishedAt, cover, authorsBio } = data;
     const author = authorsBio;
     const imageUrl = getStrapiMedia(cover.url);
-    const authorImgUrl = getStrapiMedia(authorsBio?.avatar.url);
+    const authorImgUrl = getStrapiMedia(authorsBio?.avatar?.url);
 
     return (
         <article className="space-y-8 dark:bg-black dark:text-gray-50">
